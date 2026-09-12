@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Майстерня нестандартних рішень — переобладнання Sprinter та комерційного транспорту</title>
+<meta name="description" content="Проєктуємо та переобладнуємо Mercedes Sprinter і комерційні авто під вашу задачу: вантажні, пасажирські, вантажно-пасажирські, офіс-кемпери та індивідуальні проєкти. Розкажіть, яким має бути ваш автомобіль.">
+<meta name="theme-color" content="#1e222a">
+<link rel="icon" href="logo.png">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="uk_UA">
+<meta property="og:title" content="Майстерня нестандартних рішень — переобладнання Sprinter">
+<meta property="og:description" content="Не просто переобладнуємо авто — проєктуємо його під вашу задачу, ритм життя та спосіб використання.">
+<meta property="og:image" content="logo.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.className+=' js';</script>
+</head>
+<body>
+
+<!-- ============ SVG ICON SPRITE (industrial line set) ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-wrench" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+    </symbol>
+    <symbol id="i-van" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M3 16V7.5A1.5 1.5 0 0 1 4.5 6H13a1 1 0 0 1 1 1v9"/>
+      <path d="M14 9h3.4a2 2 0 0 1 1.63.84l1.6 2.24a2 2 0 0 1 .37 1.16V16"/>
+      <path d="M3 16h2.1M9.4 16h5.2M18.9 16H21"/>
+      <circle cx="7.2" cy="17" r="1.9"/><circle cx="17" cy="17" r="1.9"/>
+      <path d="M6 9.2h5"/>
+    </symbol>
+    <symbol id="i-cargo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="7" width="12" height="10" rx="1"/>
+      <path d="M15 10h3.3a2 2 0 0 1 1.63.84l1.5 2.1a2 2 0 0 1 .37 1.16V17H15z"/>
+      <path d="M3 17h2M9 17h4"/><circle cx="7" cy="18" r="1.8"/><circle cx="16.5" cy="18" r="1.8"/>
+      <path d="M6 10.5h6M6 13h6"/>
+    </symbol>
+    <symbol id="i-seat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M7 4h2a2 2 0 0 1 2 2v6H7a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/>
+      <path d="M11 12h6a2 2 0 0 1 2 2v1H11z"/>
+      <path d="M6 15v4M18 15v4"/>
+    </symbol>
+    <symbol id="i-combo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 5h3a2 2 0 0 1 2 2v4H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z"/>
+      <rect x="12" y="6" width="9" height="7" rx="1"/>
+      <path d="M4 15h16M4 15v4M20 13v6"/><circle cx="8" cy="20" r="1.3"/><circle cx="16" cy="20" r="1.3"/>
+    </symbol>
+    <symbol id="i-custom" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 7h9M17 7h3M4 12h3M11 12h9M4 17h13M21 17h-1"/>
+      <circle cx="15" cy="7" r="2"/><circle cx="9" cy="12" r="2"/><circle cx="19" cy="17" r="2"/>
+    </symbol>
+    <symbol id="i-camper" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M3 15V8.5A1.5 1.5 0 0 1 4.5 7h10.5a3 3 0 0 1 2.6 1.5L20 12a3 3 0 0 1 1 2.2V15"/>
+      <path d="M3 15h2.2M9.4 15h5.2M18.9 15H21"/>
+      <circle cx="7.2" cy="16" r="1.8"/><circle cx="17" cy="16" r="1.8"/>
+      <rect x="5.5" y="9.5" width="4" height="3" rx=".4"/><path d="M12 7v5"/>
+    </symbol>
+    <symbol id="i-sound" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 9v6M8 6v12M12 4v16M16 8v8M20 10v4"/>
+    </symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 3 3 8l9 5 9-5-9-5Z"/><path d="M3 13l9 5 9-5"/>
+    </symbol>
+    <symbol id="i-bulb" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-4 10.5c.7.7 1 1.3 1 2.5h6c0-1.2.3-1.8 1-2.5A6 6 0 0 0 12 3Z"/>
+    </symbol>
+    <symbol id="i-power" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="8" width="16" height="10" rx="2"/><path d="M19 11h2v4h-2"/><path d="M7 6v2M13 6v2"/>
+      <path d="M11 10.5 9 14h3l-2 3.5"/>
+    </symbol>
+    <symbol id="i-belt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="9"/><path d="M8 6.5 15 15"/><path d="M15 15h2.5a1.5 1.5 0 0 0 0-3H14"/><path d="M8 6.5 10 18"/>
+    </symbol>
+    <symbol id="i-window" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="4" y="5" width="16" height="14" rx="1.5"/><path d="M4 12h16M12 5v14"/>
+    </symbol>
+    <symbol id="i-ruler" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="14" width="18" height="7" rx="1" transform="rotate(-45 12 12)"/>
+      <path d="M8 8.5l1.2 1.2M11 5.5l1.2 1.2M14 8.5l1.2 1.2"/>
+    </symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/>
+    </symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 3 5 6v6c0 4 3 6.7 7 9 4-2.3 7-5 7-9V6Z"/><path d="M9.2 12l2 2 3.6-4"/>
+    </symbol>
+    <symbol id="i-gem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M6 3h12l3 5-9 13L3 8Z"/><path d="M3 8h18M9 3 7 8l5 13 5-13-2-5"/>
+    </symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20 6 9 17l-5-5"/>
+    </symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M6.5 3.5 9 3.9l1 3.6-1.8 1.4a12 12 0 0 0 5.4 5.4l1.4-1.8 3.6 1 .4 2.5a2 2 0 0 1-2 2.3A15 15 0 0 1 4.2 5.5a2 2 0 0 1 2.3-2Z"/>
+    </symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 12h14M13 6l6 6-6 6"/>
+    </symbol>
+    <symbol id="i-play" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="9"/><path d="M10 8.5v7l6-3.5z" fill="currentColor" stroke="none"/>
+    </symbol>
+    <symbol id="i-image" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.6"/><path d="M4 17l5-4 4 3 3-2.5 4 3"/>
+    </symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-yt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="2.5" y="6" width="19" height="12" rx="3.5"/><path d="M10.5 9.3v5.4l4.5-2.7z" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-tg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 4 3 11l5 2 2 6 3-4 5 4Z"/><path d="m8 13 9-6"/></symbol>
+  </defs>
+</svg>
+
+<!-- ============ PRELOADER ============ -->
+<!-- Замінюється на анімований логотип пізніше: достатньо підмінити вміст .preloader__mark -->
+<div class="preloader" id="preloader" aria-hidden="true">
+  <div class="preloader__mark">
+    <svg class="preloader__van" viewBox="0 0 120 60" aria-hidden="true">
+      <path d="M12 46V22a3 3 0 0 1 3-3h48a2 2 0 0 1 2 2v25" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M65 27h15a5 5 0 0 1 4 2l7 9a5 5 0 0 1 1 3v6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M12 46h6M30 46h22M83 46h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <circle cx="24" cy="47" r="6" fill="none" stroke="currentColor" stroke-width="2"/>
+      <circle cx="77" cy="47" r="6" fill="none" stroke="currentColor" stroke-width="2"/>
+    </svg>
+    <span class="preloader__bar"><i></i></span>
+  </div>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="top">
+  <div class="wrap header__inner">
+    <a class="brand" href="#top" aria-label="Майстерня неста/logo.pngндартних рішень — на початок">
+      <span class="brand__plate">
+        <img src="/logo.png" alt="Логотип Майстерня нестандартних рішень" width="462" height="355">
+      </span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Головна навігація">
+      <a href="#solutions">Рішення</a>
+      <a href="#transform">Трансформація</a>
+      <a href="#works">Роботи</a>
+      <a href="#custom">Індивідуальні</a>
+      <a href="#contact">Контакти</a>
+    </nav>
+
+    <div class="header__actions">
+      <a class="phone-link" href="tel:+380000000000">
+        <svg class="ic"><use href="#i-phone"/></svg>
+        <span>+38 000 000 00 00</span>
+      </a>
+      <a class="btn btn--primary btn--sm" href="#contact">Обговорити проєкт</a>
+      <button class="burger" id="burger" aria-label="Відкрити меню" aria-expanded="false" aria-controls="nav">
+        <svg class="ic"><use href="#i-menu"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero__grid-bg" aria-hidden="true"></div>
+  <span class="v-label hero__vlabel" aria-hidden="true">Переобладнання Sprinter</span>
+
+  <div class="wrap hero__inner">
+    <div class="hero__copy">
+      <p class="eyebrow"><i class="tick"></i>Майстерня нестандартних рішень</p>
+      <h1 id="hero-title" class="hero__title">
+        <span class="hero__title-a">Стандартний фургон.</span>
+        <em>Автомобіль під вашу задачу.</em>
+      </h1>
+      <p class="hero__lead">
+        Проєктуємо та переобладнуємо Sprinter і комерційні авто — під конкретну роботу, ритм життя та спосіб використання.
+      </p>
+      <p class="slogan">«Комфорт, який видно. Функціонал, який відчуваєш.»</p>
+
+      <div class="hero__cta">
+        <a class="btn btn--primary" href="#contact">Обговорити проєкт</a>
+        <button class="btn btn--ghost" type="button" data-open-call>
+          <svg class="ic"><use href="#i-phone"/></svg>
+          Дзвінок за 30 секунд
+        </button>
+      </div>
+    </div>
+
+    <div class="hero__visual" aria-hidden="true">
+      <div class="blueprint">
+        <span class="crop tl"></span><span class="crop tr"></span><span class="crop bl"></span><span class="crop br"></span>
+        <!-- Ван-креслення -->
+        <svg class="van-draw" viewBox="0 0 320 172" role="img" aria-label="Схематичне зображення фургона Sprinter">
+          <!-- dimension line -->
+          <g class="bp-dim">
+            <path d="M28 158 H292" />
+            <path d="M28 152 V164 M292 152 V164" />
+            <text x="160" y="150" text-anchor="middle">під вашу задачу</text>
+          </g>
+          <!-- body -->
+          <g class="van-body">
+            <path class="van-outline" d="M28 118 V48 Q28 40 36 40 H205 L246 64 L278 70 Q288 72 288 82 V118 Z"/>
+            <path class="van-line" d="M40 100 H250"/>
+            <path class="van-line" d="M132 52 V116"/>
+            <rect class="van-glass" x="52" y="52" width="140" height="26" rx="3"/>
+            <path class="van-line" d="M92 52 V78 M132 52 V78 M172 52 V78"/>
+            <path class="van-glass2" d="M209 46 H240 L250 63 H209 Z"/>
+            <path class="van-line" d="M150 90 h14"/>
+            <path class="van-line" d="M282 78 h4 M280 86 h6"/>
+          </g>
+          <!-- interior (reveals on scroll near transform, static here) -->
+          <g class="van-wheels">
+            <circle cx="92" cy="118" r="23"/><circle cx="92" cy="118" r="10" class="hub"/>
+            <circle cx="228" cy="118" r="23"/><circle cx="228" cy="118" r="10" class="hub"/>
+          </g>
+        </svg>
+        <span class="bp-tag">SPEC — 001</span>
+      </div>
+    </div>
+  </div>
+
+  <a class="hero__scroll" href="#idea" aria-label="Гортати далі">
+    <span></span>
+  </a>
+</section>
+
+<!-- ============ IDEA / POSITIONING ============ -->
+<section class="idea" id="idea" aria-labelledby="idea-title">
+  <div class="wrap">
+    <h2 id="idea-title" class="idea__title">
+      Ми не просто переобладнуємо. <span class="dim">Ми проєктуємо авто під задачу.</span>
+    </h2>
+    <ol class="flow" aria-label="Як ми працюємо">
+      <li><span>Стандарт</span></li>
+      <li><span>Ваша задача</span></li>
+      <li><span>Проєкт</span></li>
+      <li><span>Переобладнання</span></li>
+      <li><span>Готове авто</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ SOLUTIONS (interactive) ============ -->
+<section class="solutions" id="solutions" aria-labelledby="sol-title">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="sol-title">Для кожної задачі — своє рішення</h2>
+      <p>Один фургон — різні сценарії. Оберіть напрям, щоб побачити, що входить.</p>
+    </div>
+
+    <div class="sol">
+      <div class="sol__list" role="tablist" aria-label="Напрями переобладнання" aria-orientation="vertical">
+        <button class="sol__tab is-active" role="tab" id="tab-cargo" aria-selected="true" aria-controls="panel-cargo" data-sol="cargo">
+          <span class="sol__no">01</span>
+          <span class="sol__name">Вантажний</span>
+          <svg class="ic sol__ic"><use href="#i-cargo"/></svg>
+        </button>
+        <button class="sol__tab" role="tab" id="tab-pass" aria-selected="false" aria-controls="panel-pass" tabindex="-1" data-sol="pass">
+          <span class="sol__no">02</span>
+          <span class="sol__name">Пасажирський</span>
+          <svg class="ic sol__ic"><use href="#i-seat"/></svg>
+        </button>
+        <button class="sol__tab" role="tab" id="tab-combo" aria-selected="false" aria-controls="panel-combo" tabindex="-1" data-sol="combo">
+          <span class="sol__no">03</span>
+          <span class="sol__name">Вантажно-пасажирський</span>
+          <svg class="ic sol__ic"><use href="#i-combo"/></svg>
+        </button>
+        <button class="sol__tab" role="tab" id="tab-custom" aria-selected="false" aria-controls="panel-custom" tabindex="-1" data-sol="custom">
+          <span class="sol__no">04</span>
+          <span class="sol__name">Індивідуальне спецзамовлення</span>
+          <svg class="ic sol__ic"><use href="#i-custom"/></svg>
+        </button>
+        <button class="sol__tab" role="tab" id="tab-camper" aria-selected="false" aria-controls="panel-camper" tabindex="-1" data-sol="camper">
+          <span class="sol__no">05</span>
+          <span class="sol__name">Офіс-кемпер</span>
+          <svg class="ic sol__ic"><use href="#i-camper"/></svg>
+        </button>
+      </div>
+
+      <div class="sol__stage">
+        <!-- CARGO -->
+        <div class="sol__panel is-active" role="tabpanel" id="panel-cargo" aria-labelledby="tab-cargo">
+          <div class="sol__media">
+            <!-- ЗАМІНИ на реальне фото/відео: <img src="..." alt="Вантажний фургон після переобладнання"> -->
+            <div class="ph" data-ph="Вантажний — фото роботи"><svg class="ic"><use href="#i-image"/></svg><span>Фото роботи</span></div>
+          </div>
+          <div class="sol__info">
+            <h3>Вантажний</h3>
+            <p>Для перевезення товарів і вантажів. Салон, який тримає навантаження щодня.</p>
+            <ul class="spec">
+              <li><svg class="ic"><use href="#i-sound"/></svg>Шумоізоляція</li>
+              <li><svg class="ic"><use href="#i-layers"/></svg>Обшивка фанерою: підлога, боковини, стеля, двері</li>
+              <li><svg class="ic"><use href="#i-bulb"/></svg>Встановлення освітлення</li>
+            </ul>
+          </div>
+        </div>
+        <!-- PASS -->
+        <div class="sol__panel" role="tabpanel" id="panel-pass" aria-labelledby="tab-pass" hidden>
+          <div class="sol__media">
+            <div class="ph" data-ph="Пасажирський — фото роботи"><svg class="ic"><use href="#i-image"/></svg><span>Фото роботи</span></div>
+          </div>
+          <div class="sol__info">
+            <h3>Пасажирський</h3>
+            <p>Для міських і міжміських перевезень. Комфорт, який відчувають пасажири.</p>
+            <ul class="spec">
+              <li><svg class="ic"><use href="#i-sound"/></svg>Шумоізоляція</li>
+              <li><svg class="ic"><use href="#i-layers"/></svg>Підлога: фанера та автолінолеум</li>
+              <li><svg class="ic"><use href="#i-window"/></svg>Стеля, боковини, задні двері — тканина або екошкіра</li>
+              <li><svg class="ic"><use href="#i-belt"/></svg>Пасажирські сидіння з ременями безпеки</li>
+            </ul>
+          </div>
+        </div>
+        <!-- COMBO -->
+        <div class="sol__panel" role="tabpanel" id="panel-combo" aria-labelledby="tab-combo" hidden>
+          <div class="sol__media">
+            <div class="ph" data-ph="Вантажно-пасажирський — фото роботи"><svg class="ic"><use href="#i-image"/></svg><span>Фото роботи</span></div>
+          </div>
+          <div class="sol__info">
+            <h3>Вантажно-пасажирський</h3>
+            <p>Рішення «2 в 1»: люди і вантаж одночасно, без компромісів.</p>
+            <ul class="spec">
+              <li><svg class="ic"><use href="#i-sound"/></svg>Шумоізоляція</li>
+              <li><svg class="ic"><use href="#i-layers"/></svg>Фанера: підлога, боковини, стеля, двері + автолінолеум</li>
+              <li><svg class="ic"><use href="#i-window"/></svg>Тканина або екошкіра на стелі, боковинах, дверях</li>
+              <li><svg class="ic"><use href="#i-belt"/></svg>Сидіння з ременями безпеки</li>
+              <li><svg class="ic"><use href="#i-bulb"/></svg>Освітлення</li>
+            </ul>
+          </div>
+        </div>
+        <!-- CUSTOM -->
+        <div class="sol__panel" role="tabpanel" id="panel-custom" aria-labelledby="tab-custom" hidden>
+          <div class="sol__media">
+            <div class="ph" data-ph="Індивідуальний проєкт — фото роботи"><svg class="ic"><use href="#i-image"/></svg><span>Фото роботи</span></div>
+          </div>
+          <div class="sol__info">
+            <h3>Індивідуальне спецзамовлення</h3>
+            <p>Приходьте із задачею, а не з готовою специфікацією. Рішення розробимо ми.</p>
+            <ul class="spec">
+              <li><svg class="ic"><use href="#i-custom"/></svg>Проєкт під призначення авто</li>
+              <li><svg class="ic"><use href="#i-power"/></svg>Потрібне обладнання</li>
+              <li><svg class="ic"><use href="#i-wrench"/></svg>Особливості використання</li>
+              <li><svg class="ic"><use href="#i-check"/></svg>Побажання замовника</li>
+            </ul>
+          </div>
+        </div>
+        <!-- CAMPER -->
+        <div class="sol__panel" role="tabpanel" id="panel-camper" aria-labelledby="tab-camper" hidden>
+          <div class="sol__media">
+            <div class="ph" data-ph="Офіс-кемпер — фото роботи"><svg class="ic"><use href="#i-image"/></svg><span>Фото роботи</span></div>
+          </div>
+          <div class="sol__info">
+            <h3>Офіс-кемпер</h3>
+            <p>Мобільний офіс, дім на колесах або комбінований простір — за індивідуальним проєктом.</p>
+            <ul class="spec">
+              <li><svg class="ic"><use href="#i-camper"/></svg>Багатофункціональний простір</li>
+              <li><svg class="ic"><use href="#i-ruler"/></svg>Планування під ваш сценарій</li>
+              <li><svg class="ic"><use href="#i-power"/></svg>Автономні системи за потреби</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRANSFORMATION (signature) ============ -->
+<section class="transform" id="transform" aria-labelledby="tr-title">
+  <div class="transform__grid-bg" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="tr-title">Від чистого аркуша — до готового авто</h2>
+      <p>Чотири кроки, за якими фургон стає інструментом під вашу роботу.</p>
+    </div>
+
+    <div class="tr__stage" aria-hidden="true">
+      <svg class="tr__van" viewBox="0 0 340 190">
+        <g class="tr-body">
+          <path class="van-outline" d="M30 130 V54 Q30 46 38 46 H215 L258 70 L292 76 Q302 78 302 88 V130 Z"/>
+          <rect class="van-glass" x="56" y="58" width="146" height="28" rx="3"/>
+          <path class="van-line" d="M96 58 V86 M138 58 V86 M180 58 V86"/>
+          <path class="van-glass2" d="M219 52 H252 L262 69 H219 Z"/>
+        </g>
+        <!-- interior fill (revealed by stages) -->
+        <g class="tr-interior">
+          <path class="fill-floor" d="M40 118 H262"/>
+          <g class="fill-seats">
+            <path d="M70 118 v-16 h10 v16 M70 102 h-6 v10" />
+            <path d="M108 118 v-16 h10 v16 M108 102 h-6 v10" />
+            <path d="M146 118 v-16 h10 v16 M146 102 h-6 v10" />
+          </g>
+          <g class="fill-panels"><path d="M40 96 H210 M40 70 H206"/></g>
+          <g class="fill-light"><circle cx="120" cy="60" r="4"/><path d="M120 60 v10"/></g>
+        </g>
+        <g class="tr-wheels">
+          <circle cx="98" cy="130" r="24"/><circle cx="98" cy="130" r="10" class="hub"/>
+          <circle cx="238" cy="130" r="24"/><circle cx="238" cy="130" r="10" class="hub"/>
+        </g>
+      </svg>
+      <div class="tr__progress"><i></i></div>
+    </div>
+
+    <ol class="tr__steps">
+      <li class="tr__step"><span class="tr__no">01</span><h3>Стандартний Sprinter</h3><p>Заводський фургон. Чистий простір і потенціал.</p></li>
+      <li class="tr__step"><span class="tr__no">02</span><h3>Проєкт</h3><p>Планування, ергономіка, матеріали, електронний проєкт.</p></li>
+      <li class="tr__step"><span class="tr__no">03</span><h3>Переобладнання</h3><p>Точна робота, якісні матеріали, контроль на кожному етапі.</p></li>
+      <li class="tr__step"><span class="tr__no">04</span><h3>Готове авто</h3><p>Працює саме так, як потрібно вам.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ WORKS / GALLERY ============ -->
+<section class="works" id="works" aria-labelledby="w-title">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="w-title">Роботи</h2>
+      <p>Фото та відео реальних проєктів. Тут з’являться ваші приклади.</p>
+    </div>
+
+    <!-- ЗАМІНИ плитки на <img>/<video>. data-cat зберігає категорію для майбутнього фільтра. -->
+    <div class="works__grid">
+      <figure class="work work--wide" data-cat="pass">
+        <div class="ph ph--work" data-ph="Пасажирський салон"><svg class="ic"><use href="#i-play"/></svg><span>Відео проєкту</span></div>
+        <figcaption>Пасажирський салон</figcaption>
+      </figure>
+      <figure class="work" data-cat="cargo">
+        <div class="ph ph--work" data-ph="Вантажний"><svg class="ic"><use href="#i-image"/></svg><span>Фото</span></div>
+        <figcaption>Вантажне облаштування</figcaption>
+      </figure>
+      <figure class="work" data-cat="camper">
+        <div class="ph ph--work" data-ph="Офіс-кемпер"><svg class="ic"><use href="#i-image"/></svg><span>Фото</span></div>
+        <figcaption>Офіс-кемпер</figcaption>
+      </figure>
+      <figure class="work" data-cat="custom">
+        <div class="ph ph--work" data-ph="Індивідуальний"><svg class="ic"><use href="#i-image"/></svg><span>Фото</span></div>
+        <figcaption>Індивідуальний проєкт</figcaption>
+      </figure>
+      <figure class="work work--tall" data-cat="combo">
+        <div class="ph ph--work" data-ph="Деталі монтажу"><svg class="ic"><use href="#i-image"/></svg><span>Фото</span></div>
+        <figcaption>Деталі монтажу</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SAFETY / QUALITY ============ -->
+<section class="quality" id="quality" aria-labelledby="q-title">
+  <div class="wrap quality__inner">
+    <div class="quality__head">
+      <h2 id="q-title">Якість, яку не видно з першого погляду</h2>
+      <p>Преміальність — це не тільки оздоблення. Це монтаж, на який можна покластися.</p>
+    </div>
+    <ul class="quality__list">
+      <li><svg class="ic"><use href="#i-belt"/></svg><div><h3>Ремені та сидіння</h3><p>Правильний монтаж пасажирських сидінь із ременями безпеки.</p></div></li>
+      <li><svg class="ic"><use href="#i-window"/></svg><div><h3>Вікна</h3><p>Акуратне встановлення — без протікань і люфтів.</p></div></li>
+      <li><svg class="ic"><use href="#i-sound"/></svg><div><h3>Шумоізоляція</h3><p>Тиша в салоні як частина комфорту.</p></div></li>
+      <li><svg class="ic"><use href="#i-bulb"/></svg><div><h3>Освітлення</h3><p>Продумане світло під сценарій використання.</p></div></li>
+      <li><svg class="ic"><use href="#i-layers"/></svg><div><h3>Обшивка</h3><p>Фанера, тканина, екошкіра — рівно та надовго.</p></div></li>
+      <li><svg class="ic"><use href="#i-wrench"/></svg><div><h3>Якість монтажу</h3><p>Контроль на кожному етапі складання.</p></div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ CUSTOM / INDIVIDUAL PROJECTS ============ -->
+<section class="custom" id="custom" aria-labelledby="c-title">
+  <div class="wrap custom__inner">
+    <div class="custom__main">
+      <p class="eyebrow"><i class="tick"></i>Індивідуальні проєкти</p>
+      <h2 id="c-title" class="custom__title">Приходьте із задачею — рішення розробимо ми.</h2>
+      <p class="custom__lead">«Потрібен автомобіль для…» — цього достатньо, щоб почати. Далі проєкт, матеріали й переобладнання беремо на себе. Беремося і за нестандартні задачі, зокрема для потреб ЗСУ.</p>
+      <a class="btn btn--primary" href="#contact">Описати задачу</a>
+    </div>
+    <ul class="custom__add">
+      <li><svg class="ic"><use href="#i-ruler"/></svg><div><h3>Електронний проєкт</h3><p>Рішення видно ще до старту робіт.</p></div></li>
+      <li><svg class="ic"><use href="#i-doc"/></svg><div><h3>Допомога з документами</h3><p>Супровід в оформленні переобладнання.</p></div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ WHY US ============ -->
+<section class="why" aria-labelledby="why-title">
+  <div class="wrap">
+    <h2 id="why-title" class="why__title">Чому нас обирають</h2>
+    <div class="why__grid">
+      <div class="why__item"><svg class="ic"><use href="#i-custom"/></svg><h3>Проєкт під задачу</h3><p>Не типове рішення, а авто саме під ваш сценарій.</p></div>
+      <div class="why__item"><svg class="ic"><use href="#i-belt"/></svg><h3>Увага до безпеки</h3><p>Сидіння, ремені, вікна, монтаж — за правилами.</p></div>
+      <div class="why__item"><svg class="ic"><use href="#i-gem"/></svg><h3>Комфорт, що відчувається</h3><p>Тиша, оздоблення, ергономіка щодня.</p></div>
+      <div class="why__item"><svg class="ic"><use href="#i-doc"/></svg><h3>Супровід</h3><p>Проєкт і допомога з документами — з вами до кінця.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA + CONTACT FORM ============ -->
+<section class="contact" id="contact" aria-labelledby="ct-title">
+  <div class="wrap contact__inner">
+    <div class="contact__copy">
+      <h2 id="ct-title">Розкажіть, яким має бути ваш автомобіль</h2>
+      <p>Коротко опишіть задачу — ми запропонуємо рішення. Або залиште номер і оберіть швидкий дзвінок.</p>
+      <ul class="contact__facts">
+        <li><svg class="ic"><use href="#i-phone"/></svg><a href="tel:+380000000000">+38 000 000 00 00</a></li>
+        <li><svg class="ic"><use href="#i-mail"/></svg><a href="mailto:hello@example.com">hello@example.com</a></li>
+        <li><svg class="ic"><use href="#i-pin"/></svg><span>Регіон роботи — вкажіть місто</span></li>
+        <li><svg class="ic"><use href="#i-clock"/></svg><span>Пн–Сб, робочі години</span></li>
+      </ul>
+    </div>
+
+    <div class="contact__formwrap">
+      <form class="form js-form" novalidate>
+        <div class="field">
+          <label for="f-name">Ім’я</label>
+          <input id="f-name" name="name" type="text" autocomplete="name" placeholder="Як до вас звертатися">
+        </div>
+        <div class="field">
+          <label for="f-phone">Телефон <span class="req">*</span></label>
+          <input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required placeholder="+38 0__ ___ __ __">
+          <span class="field__err" data-err>Вкажіть коректний номер телефону.</span>
+        </div>
+        <div class="field">
+          <label for="f-type">Тип авто</label>
+          <div class="select">
+            <select id="f-type" name="type">
+              <option value="Вантажний">Вантажний</option>
+              <option value="Пасажирський">Пасажирський</option>
+              <option value="Вантажно-пасажирський">Вантажно-пасажирський</option>
+              <option value="Індивідуальне спецзамовлення">Індивідуальне спецзамовлення</option>
+              <option value="Офіс-кемпер">Офіс-кемпер</option>
+              <option value="Ще не визначився">Ще не визначився</option>
+            </select>
+            <svg class="ic"><use href="#i-arrow"/></svg>
+          </div>
+        </div>
+        <div class="field">
+          <label for="f-task">Що потрібно</label>
+          <input id="f-task" name="task" type="text" placeholder="Напр.: 8 пасажирів + місце для вантажу">
+        </div>
+        <button class="btn btn--primary btn--block" type="submit">Обговорити проєкт</button>
+        <p class="form__note">Без спаму. Телефонуємо лише щодо вашого запиту.</p>
+
+        <div class="form__success" hidden>
+          <svg class="ic form__successic"><use href="#i-check"/></svg>
+          <h3>Дякуємо!</h3>
+          <p>Ми отримали ваш запит і зв’яжемося найближчим часом.</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="wrap footer__inner">
+    <div class="footer__brand">
+      <span class="brand__plate brand__plate--sm">
+        <img src="/logo.png" alt="Майстерня нестандартних рішень" width="462" height="355">
+      </span>
+      <p class="footer__mission">Створюємо автомобілі, які відповідають способу життя та потребам їхніх власників — поєднуючи комфорт, функціональність, якість та індивідуальний дизайн.</p>
+    </div>
+
+    <nav class="footer__nav" aria-label="Навігація у футері">
+      <h4>Навігація</h4>
+      <a href="#solutions">Рішення</a>
+      <a href="#transform">Трансформація</a>
+      <a href="#works">Роботи</a>
+      <a href="#custom">Індивідуальні</a>
+      <a href="#contact">Контакти</a>
+    </nav>
+
+    <div class="footer__contacts">
+      <h4>Контакти</h4>
+      <a href="tel:+380000000000"><svg class="ic"><use href="#i-phone"/></svg>+38 000 000 00 00</a>
+      <a href="mailto:hello@example.com"><svg class="ic"><use href="#i-mail"/></svg>hello@example.com</a>
+      <div class="footer__social" aria-label="Соцмережі">
+        <a href="#" aria-label="Instagram"><svg class="ic"><use href="#i-ig"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg class="ic"><use href="#i-yt"/></svg></a>
+        <a href="#" aria-label="Telegram"><svg class="ic"><use href="#i-tg"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap footer__bottom">
+    <span>© <span id="year">2025</span> Майстерня нестандартних рішень</span>
+    <span class="footer__slogan">Комфорт, який видно. Функціонал, який відчуваєш.</span>
+  </div>
+</footer>
+
+<!-- ============ FLOATING QUICK CALL ============ -->
+<button class="fab" type="button" data-open-call aria-label="Замовити дзвінок за 30 секунд">
+  <svg class="ic"><use href="#i-phone"/></svg>
+  <span class="fab__text">Дзвінок за 30 сек</span>
+</button>
+
+<!-- ============ CALL MODAL ============ -->
+<div class="modal" id="callModal" aria-hidden="true">
+  <div class="modal__backdrop" data-close-call></div>
+  <div class="modal__box" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button class="modal__close" type="button" data-close-call aria-label="Закрити"><svg class="ic"><use href="#i-close"/></svg></button>
+    <p class="eyebrow"><i class="tick"></i>Швидкий контакт</p>
+    <h3 id="modal-title" class="modal__title">Дзвінок за 30 секунд</h3>
+    <p class="modal__sub">Залиште номер — передзвонимо, щоб обговорити ваш проєкт.</p>
+    <form class="form js-form js-form--quick" novalidate>
+      <div class="field">
+        <label for="m-phone">Телефон <span class="req">*</span></label>
+        <input id="m-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required placeholder="+38 0__ ___ __ __">
+        <span class="field__err" data-err>Вкажіть коректний номер телефону.</span>
+      </div>
+      <button class="btn btn--primary btn--block" type="submit">
+        <svg class="ic"><use href="#i-phone"/></svg>Передзвоніть мені
+      </button>
+
+      <div class="form__success form__success--call" hidden>
+        <div class="countdown" aria-hidden="true"><span data-count>30</span></div>
+        <h3>Приймаємо запит…</h3>
+        <p class="js-call-msg">Передзвонимо протягом 30 секунд.</p>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- GSAP (progressive enhancement; сайт повністю працює й без нього) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="script.js" defer></script>
+</body>
+</html>
