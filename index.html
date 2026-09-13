@@ -153,9 +153,9 @@
     </nav>
 
     <div class="header__actions">
-      <a class="phone-link" href="tel:+380000000000">
+      <a class="phone-link" href="tel:+380676585576">
         <svg class="ic"><use href="#i-phone"/></svg>
-        <span>+38 000 000 00 00</span>
+        <span>+380 67 658 55 76</span>
       </a>
       <a class="btn btn--primary btn--sm" href="#contact">Обговорити проєкт</a>
       <button class="burger" id="burger" aria-label="Відкрити меню" aria-expanded="false" aria-controls="nav">
@@ -288,8 +288,7 @@
         <!-- CARGO -->
         <div class="sol__panel is-active" role="tabpanel" id="panel-cargo" aria-labelledby="tab-cargo">
           <div class="sol__media">
-            <!-- ЗАМІНИ на реальне фото/відео: <img src="..." alt="Вантажний фургон після переобладнання"> -->
-            <div class="ph" data-ph="Вантажний — фото роботи"><svg class="ic"><use href="#i-image"/></svg><span>Фото роботи</span></div>
+            <button class="work__open sol__open" type="button" data-full="01-vantazhnyi/5269464890240792738.jpg" aria-label="Вантажний — приклад, збільшити"><img class="sol__img" src="01-vantazhnyi/5269464890240792738.jpg" alt="Вантажний — приклад роботи" loading="lazy" decoding="async"></button>
           </div>
           <div class="sol__info">
             <h3>Вантажний</h3>
@@ -304,7 +303,7 @@
         <!-- PASS -->
         <div class="sol__panel" role="tabpanel" id="panel-pass" aria-labelledby="tab-pass" hidden>
           <div class="sol__media">
-            <div class="ph" data-ph="Пасажирський — фото роботи"><svg class="ic"><use href="#i-image"/></svg><span>Фото роботи</span></div>
+            <div class="ph" data-ph="Пасажирський — фото роботи"><svg class="ic"><use href="#i-image"/></svg><span>Фото незабаром</span></div>
           </div>
           <div class="sol__info">
             <h3>Пасажирський</h3>
@@ -320,7 +319,7 @@
         <!-- COMBO -->
         <div class="sol__panel" role="tabpanel" id="panel-combo" aria-labelledby="tab-combo" hidden>
           <div class="sol__media">
-            <div class="ph" data-ph="Вантажно-пасажирський — фото роботи"><svg class="ic"><use href="#i-image"/></svg><span>Фото роботи</span></div>
+            <button class="work__open sol__open" type="button" data-full="03-vantazhno-pasazhyrskyi/5264933523653600727.jpg" aria-label="Вантажно-пасажирський — приклад, збільшити"><img class="sol__img" src="03-vantazhno-pasazhyrskyi/5264933523653600727.jpg" alt="Вантажно-пасажирський — приклад роботи" loading="lazy" decoding="async"></button>
           </div>
           <div class="sol__info">
             <h3>Вантажно-пасажирський</h3>
@@ -337,7 +336,7 @@
         <!-- CUSTOM -->
         <div class="sol__panel" role="tabpanel" id="panel-custom" aria-labelledby="tab-custom" hidden>
           <div class="sol__media">
-            <div class="ph" data-ph="Індивідуальний проєкт — фото роботи"><svg class="ic"><use href="#i-image"/></svg><span>Фото роботи</span></div>
+            <button class="work__open sol__open" type="button" data-full="04-indyvidualne-speczamovlennya/5264933523653600717.jpg" aria-label="Індивідуальне спецзамовлення — приклад, збільшити"><img class="sol__img" src="04-indyvidualne-speczamovlennya/5264933523653600717.jpg" alt="Індивідуальне спецзамовлення — приклад роботи" loading="lazy" decoding="async"></button>
           </div>
           <div class="sol__info">
             <h3>Індивідуальне спецзамовлення</h3>
@@ -353,7 +352,7 @@
         <!-- CAMPER -->
         <div class="sol__panel" role="tabpanel" id="panel-camper" aria-labelledby="tab-camper" hidden>
           <div class="sol__media">
-            <div class="ph" data-ph="Офіс-кемпер — фото роботи"><svg class="ic"><use href="#i-image"/></svg><span>Фото роботи</span></div>
+            <button class="work__open sol__open" type="button" data-full="05-ofis-kemper/5264933523653600747.jpg" aria-label="Офіс-кемпер — приклад, збільшити"><img class="sol__img" src="05-ofis-kemper/5264933523653600747.jpg" alt="Офіс-кемпер — приклад роботи" loading="lazy" decoding="async"></button>
           </div>
           <div class="sol__info">
             <h3>Офіс-кемпер</h3>
@@ -420,31 +419,100 @@
   <div class="wrap">
     <div class="section-head">
       <h2 id="w-title">Роботи</h2>
-      <p>Фото та відео реальних проєктів. Тут з’являться ваші приклади.</p>
+      <p>Фото та відео реальних проєктів. Гортайте вбік, щоб переглянути більше, або торкніться фото, щоб збільшити.</p>
     </div>
 
-    <!-- ЗАМІНИ плитки на <img>/<video>. data-cat зберігає категорію для майбутнього фільтра. -->
-    <div class="works__grid">
-      <figure class="work work--wide" data-cat="pass">
-        <div class="ph ph--work" data-ph="Пасажирський салон"><svg class="ic"><use href="#i-play"/></svg><span>Відео проєкту</span></div>
-        <figcaption>Пасажирський салон</figcaption>
-      </figure>
-      <figure class="work" data-cat="cargo">
-        <div class="ph ph--work" data-ph="Вантажний"><svg class="ic"><use href="#i-image"/></svg><span>Фото</span></div>
-        <figcaption>Вантажне облаштування</figcaption>
-      </figure>
-      <figure class="work" data-cat="camper">
-        <div class="ph ph--work" data-ph="Офіс-кемпер"><svg class="ic"><use href="#i-image"/></svg><span>Фото</span></div>
-        <figcaption>Офіс-кемпер</figcaption>
-      </figure>
-      <figure class="work" data-cat="custom">
-        <div class="ph ph--work" data-ph="Індивідуальний"><svg class="ic"><use href="#i-image"/></svg><span>Фото</span></div>
-        <figcaption>Індивідуальний проєкт</figcaption>
-      </figure>
-      <figure class="work work--tall" data-cat="combo">
-        <div class="ph ph--work" data-ph="Деталі монтажу"><svg class="ic"><use href="#i-image"/></svg><span>Фото</span></div>
-        <figcaption>Деталі монтажу</figcaption>
-      </figure>
+    <div class="works__gallery">
+      <div class="works__cat" data-cat="cargo">
+        <h3 class="works__cat-title"><svg class="ic"><use href="#i-cargo"/></svg>Вантажний</h3>
+        <div class="carousel">
+          <button class="carousel__btn carousel__btn--prev" type="button" aria-label="Назад"><svg class="ic"><use href="#i-arrow"/></svg></button>
+          <div class="carousel__track">
+            <figure class="work"><button class="work__open" type="button" data-full="01-vantazhnyi/5269464890240792738.jpg" aria-label="Вантажний — фото 1, відкрити"><img src="01-vantazhnyi/5269464890240792738.jpg" alt="Вантажний — робота 1" loading="lazy" decoding="async"></button></figure>
+            <figure class="work"><button class="work__open" type="button" data-full="01-vantazhnyi/5269464890240792739.jpg" aria-label="Вантажний — фото 2, відкрити"><img src="01-vantazhnyi/5269464890240792739.jpg" alt="Вантажний — робота 2" loading="lazy" decoding="async"></button></figure>
+            <figure class="work"><button class="work__open" type="button" data-full="01-vantazhnyi/5269464890240792740.jpg" aria-label="Вантажний — фото 3, відкрити"><img src="01-vantazhnyi/5269464890240792740.jpg" alt="Вантажний — робота 3" loading="lazy" decoding="async"></button></figure>
+            <figure class="work"><button class="work__open" type="button" data-full="01-vantazhnyi/5269464890240792741.jpg" aria-label="Вантажний — фото 4, відкрити"><img src="01-vantazhnyi/5269464890240792741.jpg" alt="Вантажний — робота 4" loading="lazy" decoding="async"></button></figure>
+            <figure class="work"><button class="work__open" type="button" data-full="01-vantazhnyi/5269464890240792742.jpg" aria-label="Вантажний — фото 5, відкрити"><img src="01-vantazhnyi/5269464890240792742.jpg" alt="Вантажний — робота 5" loading="lazy" decoding="async"></button></figure>
+            <figure class="work"><button class="work__open" type="button" data-full="01-vantazhnyi/5269464890240792743.jpg" aria-label="Вантажний — фото 6, відкрити"><img src="01-vantazhnyi/5269464890240792743.jpg" alt="Вантажний — робота 6" loading="lazy" decoding="async"></button></figure>
+            <figure class="work"><button class="work__open" type="button" data-full="01-vantazhnyi/5269464890240792744.jpg" aria-label="Вантажний — фото 7, відкрити"><img src="01-vantazhnyi/5269464890240792744.jpg" alt="Вантажний — робота 7" loading="lazy" decoding="async"></button></figure>
+            <figure class="work"><button class="work__open" type="button" data-full="01-vantazhnyi/5269464890240792745.jpg" aria-label="Вантажний — фото 8, відкрити"><img src="01-vantazhnyi/5269464890240792745.jpg" alt="Вантажний — робота 8" loading="lazy" decoding="async"></button></figure>
+            <figure class="work"><button class="work__open" type="button" data-full="01-vantazhnyi/5269464890240792746.jpg" aria-label="Вантажний — фото 9, відкрити"><img src="01-vantazhnyi/5269464890240792746.jpg" alt="Вантажний — робота 9" loading="lazy" decoding="async"></button></figure>
+          </div>
+          <button class="carousel__btn carousel__btn--next" type="button" aria-label="Далі"><svg class="ic"><use href="#i-arrow"/></svg></button>
+        </div>
+      </div>
+      <div class="works__cat" data-cat="pass">
+        <h3 class="works__cat-title"><svg class="ic"><use href="#i-seat"/></svg>Пасажирський</h3>
+        <div class="carousel">
+          <div class="carousel__track">
+            <figure class="work work--soon"><div class="ph ph--work" data-ph="Пасажирський"><svg class="ic"><use href="#i-image"/></svg><span>Фото незабаром</span></div></figure>
+          </div>
+        </div>
+      </div>
+      <div class="works__cat" data-cat="combo">
+        <h3 class="works__cat-title"><svg class="ic"><use href="#i-combo"/></svg>Вантажно-пасажирський</h3>
+        <div class="carousel">
+          <button class="carousel__btn carousel__btn--prev" type="button" aria-label="Назад"><svg class="ic"><use href="#i-arrow"/></svg></button>
+          <div class="carousel__track">
+            <figure class="work"><button class="work__open" type="button" data-full="03-vantazhno-pasazhyrskyi/5264933523653600727.jpg" aria-label="Вантажно-пасажирський — фото 1, відкрити"><img src="03-vantazhno-pasazhyrskyi/5264933523653600727.jpg" alt="Вантажно-пасажирський — робота 1" loading="lazy" decoding="async"></button></figure>
+            <figure class="work"><button class="work__open" type="button" data-full="03-vantazhno-pasazhyrskyi/5264933523653600728.jpg" aria-label="Вантажно-пасажирський — фото 2, відкрити"><img src="03-vantazhno-pasazhyrskyi/5264933523653600728.jpg" alt="Вантажно-пасажирський — робота 2" loading="lazy" decoding="async"></button></figure>
+            <figure class="work"><button class="work__open" type="button" data-full="03-vantazhno-pasazhyrskyi/5264933523653600729.jpg" aria-label="Вантажно-пасажирський — фото 3, відкрити"><img src="03-vantazhno-pasazhyrskyi/5264933523653600729.jpg" alt="Вантажно-пасажирський — робота 3" loading="lazy" decoding="async"></button></figure>
+            <figure class="work"><button class="work__open" type="button" data-full="03-vantazhno-pasazhyrskyi/5264933523653600730.jpg" aria-label="Вантажно-пасажирський — фото 4, відкрити"><img src="03-vantazhno-pasazhyrskyi/5264933523653600730.jpg" alt="Вантажно-пасажирський — робота 4" loading="lazy" decoding="async"></button></figure>
+            <figure class="work"><button class="work__open" type="button" data-full="03-vantazhno-pasazhyrskyi/5264933523653600731.jpg" aria-label="Вантажно-пасажирський — фото 5, відкрити"><img src="03-vantazhno-pasazhyrskyi/5264933523653600731.jpg" alt="Вантажно-пасажирський — робота 5" loading="lazy" decoding="async"></button></figure>
+            <figure class="work"><button class="work__open" type="button" data-full="03-vantazhno-pasazhyrskyi/5264933523653600732.jpg" aria-label="Вантажно-пасажирський — фото 6, відкрити"><img src="03-vantazhno-pasazhyrskyi/5264933523653600732.jpg" alt="Вантажно-пасажирський — робота 6" loading="lazy" decoding="async"></button></figure>
+            <figure class="work"><button class="work__open" type="button" data-full="03-vantazhno-pasazhyrskyi/5264933523653600733.jpg" aria-label="Вантажно-пасажирський — фото 7, відкрити"><img src="03-vantazhno-pasazhyrskyi/5264933523653600733.jpg" alt="Вантажно-пасажирський — робота 7" loading="lazy" decoding="async"></button></figure>
+            <figure class="work"><button class="work__open" type="button" data-full="03-vantazhno-pasazhyrskyi/5264933523653600734.jpg" aria-label="Вантажно-пасажирський — фото 8, відкрити"><img src="03-vantazhno-pasazhyrskyi/5264933523653600734.jpg" alt="Вантажно-пасажирський — робота 8" loading="lazy" decoding="async"></button></figure>
+            <figure class="work"><button class="work__open" type="button" data-full="03-vantazhno-pasazhyrskyi/5264933523653600735.jpg" aria-label="Вантажно-пасажирський — фото 9, відкрити"><img src="03-vantazhno-pasazhyrskyi/5264933523653600735.jpg" alt="Вантажно-пасажирський — робота 9" loading="lazy" decoding="async"></button></figure>
+            <figure class="work work--video"><button class="video-lite" type="button" data-src="03-vantazhno-pasazhyrskyi/video5264933523193638051.mp4" aria-label="Вантажно-пасажирський — відео, відтворити"><span class="video-lite__play"><svg class="ic"><use href="#i-play"/></svg></span><span class="video-lite__label">Відео</span></button></figure>
+            <figure class="work work--video"><button class="video-lite" type="button" data-src="03-vantazhno-pasazhyrskyi/video5264933523193638052.mp4" aria-label="Вантажно-пасажирський — відео, відтворити"><span class="video-lite__play"><svg class="ic"><use href="#i-play"/></svg></span><span class="video-lite__label">Відео</span></button></figure>
+          </div>
+          <button class="carousel__btn carousel__btn--next" type="button" aria-label="Далі"><svg class="ic"><use href="#i-arrow"/></svg></button>
+        </div>
+      </div>
+      <div class="works__cat" data-cat="custom">
+        <h3 class="works__cat-title"><svg class="ic"><use href="#i-custom"/></svg>Індивідуальне спецзамовлення</h3>
+        <div class="carousel">
+          <button class="carousel__btn carousel__btn--prev" type="button" aria-label="Назад"><svg class="ic"><use href="#i-arrow"/></svg></button>
+          <div class="carousel__track">
+            <figure class="work"><button class="work__open" type="button" data-full="04-indyvidualne-speczamovlennya/5264933523653600717.jpg" aria-label="Індивідуальне спецзамовлення — фото 1, відкрити"><img src="04-indyvidualne-speczamovlennya/5264933523653600717.jpg" alt="Індивідуальне спецзамовлення — робота 1" loading="lazy" decoding="async"></button></figure>
+            <figure class="work"><button class="work__open" type="button" data-full="04-indyvidualne-speczamovlennya/5355212580865570411.jpg" aria-label="Індивідуальне спецзамовлення — фото 2, відкрити"><img src="04-indyvidualne-speczamovlennya/5355212580865570411.jpg" alt="Індивідуальне спецзамовлення — робота 2" loading="lazy" decoding="async"></button></figure>
+            <figure class="work"><button class="work__open" type="button" data-full="04-indyvidualne-speczamovlennya/5355212580865570412.jpg" aria-label="Індивідуальне спецзамовлення — фото 3, відкрити"><img src="04-indyvidualne-speczamovlennya/5355212580865570412.jpg" alt="Індивідуальне спецзамовлення — робота 3" loading="lazy" decoding="async"></button></figure>
+            <figure class="work"><button class="work__open" type="button" data-full="04-indyvidualne-speczamovlennya/5355212580865570413.jpg" aria-label="Індивідуальне спецзамовлення — фото 4, відкрити"><img src="04-indyvidualne-speczamovlennya/5355212580865570413.jpg" alt="Індивідуальне спецзамовлення — робота 4" loading="lazy" decoding="async"></button></figure>
+            <figure class="work"><button class="work__open" type="button" data-full="04-indyvidualne-speczamovlennya/5355212580865570414.jpg" aria-label="Індивідуальне спецзамовлення — фото 5, відкрити"><img src="04-indyvidualne-speczamovlennya/5355212580865570414.jpg" alt="Індивідуальне спецзамовлення — робота 5" loading="lazy" decoding="async"></button></figure>
+            <figure class="work"><button class="work__open" type="button" data-full="04-indyvidualne-speczamovlennya/5355212580865570415.jpg" aria-label="Індивідуальне спецзамовлення — фото 6, відкрити"><img src="04-indyvidualne-speczamovlennya/5355212580865570415.jpg" alt="Індивідуальне спецзамовлення — робота 6" loading="lazy" decoding="async"></button></figure>
+            <figure class="work"><button class="work__open" type="button" data-full="04-indyvidualne-speczamovlennya/5355212580865570416.jpg" aria-label="Індивідуальне спецзамовлення — фото 7, відкрити"><img src="04-indyvidualne-speczamovlennya/5355212580865570416.jpg" alt="Індивідуальне спецзамовлення — робота 7" loading="lazy" decoding="async"></button></figure>
+            <figure class="work"><button class="work__open" type="button" data-full="04-indyvidualne-speczamovlennya/5355212580865570417.jpg" aria-label="Індивідуальне спецзамовлення — фото 8, відкрити"><img src="04-indyvidualne-speczamovlennya/5355212580865570417.jpg" alt="Індивідуальне спецзамовлення — робота 8" loading="lazy" decoding="async"></button></figure>
+            <figure class="work"><button class="work__open" type="button" data-full="04-indyvidualne-speczamovlennya/5355212580865570418.jpg" aria-label="Індивідуальне спецзамовлення — фото 9, відкрити"><img src="04-indyvidualne-speczamovlennya/5355212580865570418.jpg" alt="Індивідуальне спецзамовлення — робота 9" loading="lazy" decoding="async"></button></figure>
+            <figure class="work"><button class="work__open" type="button" data-full="04-indyvidualne-speczamovlennya/5355212580865570419.jpg" aria-label="Індивідуальне спецзамовлення — фото 10, відкрити"><img src="04-indyvidualne-speczamovlennya/5355212580865570419.jpg" alt="Індивідуальне спецзамовлення — робота 10" loading="lazy" decoding="async"></button></figure>
+            <figure class="work"><button class="work__open" type="button" data-full="04-indyvidualne-speczamovlennya/5355212580865570421.jpg" aria-label="Індивідуальне спецзамовлення — фото 11, відкрити"><img src="04-indyvidualne-speczamovlennya/5355212580865570421.jpg" alt="Індивідуальне спецзамовлення — робота 11" loading="lazy" decoding="async"></button></figure>
+            <figure class="work"><button class="work__open" type="button" data-full="04-indyvidualne-speczamovlennya/5355212580865570422.jpg" aria-label="Індивідуальне спецзамовлення — фото 12, відкрити"><img src="04-indyvidualne-speczamovlennya/5355212580865570422.jpg" alt="Індивідуальне спецзамовлення — робота 12" loading="lazy" decoding="async"></button></figure>
+          </div>
+          <button class="carousel__btn carousel__btn--next" type="button" aria-label="Далі"><svg class="ic"><use href="#i-arrow"/></svg></button>
+        </div>
+      </div>
+      <div class="works__cat" data-cat="camper">
+        <h3 class="works__cat-title"><svg class="ic"><use href="#i-camper"/></svg>Офіс-кемпер</h3>
+        <div class="carousel">
+          <button class="carousel__btn carousel__btn--prev" type="button" aria-label="Назад"><svg class="ic"><use href="#i-arrow"/></svg></button>
+          <div class="carousel__track">
+            <figure class="work"><button class="work__open" type="button" data-full="05-ofis-kemper/5264933523653600747.jpg" aria-label="Офіс-кемпер — фото 1, відкрити"><img src="05-ofis-kemper/5264933523653600747.jpg" alt="Офіс-кемпер — робота 1" loading="lazy" decoding="async"></button></figure>
+            <figure class="work"><button class="work__open" type="button" data-full="05-ofis-kemper/5264933523653600748.jpg" aria-label="Офіс-кемпер — фото 2, відкрити"><img src="05-ofis-kemper/5264933523653600748.jpg" alt="Офіс-кемпер — робота 2" loading="lazy" decoding="async"></button></figure>
+            <figure class="work"><button class="work__open" type="button" data-full="05-ofis-kemper/5264933523653600749.jpg" aria-label="Офіс-кемпер — фото 3, відкрити"><img src="05-ofis-kemper/5264933523653600749.jpg" alt="Офіс-кемпер — робота 3" loading="lazy" decoding="async"></button></figure>
+            <figure class="work"><button class="work__open" type="button" data-full="05-ofis-kemper/5264933523653600750.jpg" aria-label="Офіс-кемпер — фото 4, відкрити"><img src="05-ofis-kemper/5264933523653600750.jpg" alt="Офіс-кемпер — робота 4" loading="lazy" decoding="async"></button></figure>
+            <figure class="work"><button class="work__open" type="button" data-full="05-ofis-kemper/5264933523653600751.jpg" aria-label="Офіс-кемпер — фото 5, відкрити"><img src="05-ofis-kemper/5264933523653600751.jpg" alt="Офіс-кемпер — робота 5" loading="lazy" decoding="async"></button></figure>
+            <figure class="work"><button class="work__open" type="button" data-full="05-ofis-kemper/5264933523653600752.jpg" aria-label="Офіс-кемпер — фото 6, відкрити"><img src="05-ofis-kemper/5264933523653600752.jpg" alt="Офіс-кемпер — робота 6" loading="lazy" decoding="async"></button></figure>
+            <figure class="work"><button class="work__open" type="button" data-full="05-ofis-kemper/5264933523653600753.jpg" aria-label="Офіс-кемпер — фото 7, відкрити"><img src="05-ofis-kemper/5264933523653600753.jpg" alt="Офіс-кемпер — робота 7" loading="lazy" decoding="async"></button></figure>
+            <figure class="work"><button class="work__open" type="button" data-full="05-ofis-kemper/5264933523653600754.jpg" aria-label="Офіс-кемпер — фото 8, відкрити"><img src="05-ofis-kemper/5264933523653600754.jpg" alt="Офіс-кемпер — робота 8" loading="lazy" decoding="async"></button></figure>
+            <figure class="work"><button class="work__open" type="button" data-full="05-ofis-kemper/5264933523653600755.jpg" aria-label="Офіс-кемпер — фото 9, відкрити"><img src="05-ofis-kemper/5264933523653600755.jpg" alt="Офіс-кемпер — робота 9" loading="lazy" decoding="async"></button></figure>
+            <figure class="work"><button class="work__open" type="button" data-full="05-ofis-kemper/5264933523653600756.jpg" aria-label="Офіс-кемпер — фото 10, відкрити"><img src="05-ofis-kemper/5264933523653600756.jpg" alt="Офіс-кемпер — робота 10" loading="lazy" decoding="async"></button></figure>
+            <figure class="work"><button class="work__open" type="button" data-full="05-ofis-kemper/5264933523653600757.jpg" aria-label="Офіс-кемпер — фото 11, відкрити"><img src="05-ofis-kemper/5264933523653600757.jpg" alt="Офіс-кемпер — робота 11" loading="lazy" decoding="async"></button></figure>
+            <figure class="work"><button class="work__open" type="button" data-full="05-ofis-kemper/5264933523653600758.jpg" aria-label="Офіс-кемпер — фото 12, відкрити"><img src="05-ofis-kemper/5264933523653600758.jpg" alt="Офіс-кемпер — робота 12" loading="lazy" decoding="async"></button></figure>
+            <figure class="work work--video"><button class="video-lite" type="button" data-src="05-ofis-kemper/video5264933523193638059.mp4" aria-label="Офіс-кемпер — відео, відтворити"><span class="video-lite__play"><svg class="ic"><use href="#i-play"/></svg></span><span class="video-lite__label">Відео</span></button></figure>
+            <figure class="work work--video"><button class="video-lite" type="button" data-src="05-ofis-kemper/video5264933523193638066.mp4" aria-label="Офіс-кемпер — відео, відтворити"><span class="video-lite__play"><svg class="ic"><use href="#i-play"/></svg></span><span class="video-lite__label">Відео</span></button></figure>
+          </div>
+          <button class="carousel__btn carousel__btn--next" type="button" aria-label="Далі"><svg class="ic"><use href="#i-arrow"/></svg></button>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -503,7 +571,7 @@
       <h2 id="ct-title">Розкажіть, яким має бути ваш автомобіль</h2>
       <p>Коротко опишіть задачу — ми запропонуємо рішення. Або залиште номер і оберіть швидкий дзвінок.</p>
       <ul class="contact__facts">
-        <li><svg class="ic"><use href="#i-phone"/></svg><a href="tel:+380000000000">+38 000 000 00 00</a></li>
+        <li><svg class="ic"><use href="#i-phone"/></svg><a href="tel:+380676585576">+380 67 658 55 76</a></li>
         <li><svg class="ic"><use href="#i-mail"/></svg><a href="mailto:hello@example.com">hello@example.com</a></li>
         <li><svg class="ic"><use href="#i-pin"/></svg><span>Регіон роботи — вкажіть місто</span></li>
         <li><svg class="ic"><use href="#i-clock"/></svg><span>Пн–Сб, робочі години</span></li>
@@ -575,7 +643,7 @@
 
     <div class="footer__contacts">
       <h4>Контакти</h4>
-      <a href="tel:+380000000000"><svg class="ic"><use href="#i-phone"/></svg>+38 000 000 00 00</a>
+      <a href="tel:+380676585576"><svg class="ic"><use href="#i-phone"/></svg>+380 67 658 55 76</a>
       <a href="mailto:hello@example.com"><svg class="ic"><use href="#i-mail"/></svg>hello@example.com</a>
       <div class="footer__social" aria-label="Соцмережі">
         <a href="#" aria-label="Instagram"><svg class="ic"><use href="#i-ig"/></svg></a>
@@ -621,6 +689,18 @@
       </div>
     </form>
   </div>
+</div>
+
+<!-- ============ LIGHTBOX (gallery viewer) ============ -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <div class="lightbox__backdrop" data-lb-close></div>
+  <button class="lightbox__close" type="button" data-lb-close aria-label="Закрити"><svg class="ic"><use href="#i-close"/></svg></button>
+  <button class="lightbox__nav lightbox__nav--prev" type="button" data-lb-prev aria-label="Попереднє фото"><svg class="ic"><use href="#i-arrow"/></svg></button>
+  <figure class="lightbox__stage" role="dialog" aria-modal="true" aria-label="Перегляд фото">
+    <img class="lightbox__img" alt="">
+    <figcaption class="lightbox__count" data-lb-count></figcaption>
+  </figure>
+  <button class="lightbox__nav lightbox__nav--next" type="button" data-lb-next aria-label="Наступне фото"><svg class="ic"><use href="#i-arrow"/></svg></button>
 </div>
 
 <!-- GSAP (progressive enhancement; сайт повністю працює й без нього) -->
