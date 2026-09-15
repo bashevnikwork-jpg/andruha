@@ -169,6 +169,7 @@
 
 <!-- ============ HERO ============ -->
 <section class="hero" aria-labelledby="hero-title">
+  <div class="hero__photo" aria-hidden="true"></div>
   <div class="hero__grid-bg" aria-hidden="true"></div>
   <span class="v-label hero__vlabel" aria-hidden="true">Переобладнання Sprinter</span>
 
@@ -193,35 +194,11 @@
       </div>
     </div>
 
-    <div class="hero__visual" aria-hidden="true">
-      <div class="blueprint">
+    <div class="hero__visual">
+      <div class="blueprint blueprint--photo">
         <span class="crop tl"></span><span class="crop tr"></span><span class="crop bl"></span><span class="crop br"></span>
-        <!-- Ван-креслення -->
-        <svg class="van-draw" viewBox="0 0 320 172" role="img" aria-label="Схематичне зображення фургона Sprinter">
-          <!-- dimension line -->
-          <g class="bp-dim">
-            <path d="M28 158 H292" />
-            <path d="M28 152 V164 M292 152 V164" />
-            <text x="160" y="150" text-anchor="middle">під вашу задачу</text>
-          </g>
-          <!-- body -->
-          <g class="van-body">
-            <path class="van-outline" d="M28 118 V48 Q28 40 36 40 H205 L246 64 L278 70 Q288 72 288 82 V118 Z"/>
-            <path class="van-line" d="M40 100 H250"/>
-            <path class="van-line" d="M132 52 V116"/>
-            <rect class="van-glass" x="52" y="52" width="140" height="26" rx="3"/>
-            <path class="van-line" d="M92 52 V78 M132 52 V78 M172 52 V78"/>
-            <path class="van-glass2" d="M209 46 H240 L250 63 H209 Z"/>
-            <path class="van-line" d="M150 90 h14"/>
-            <path class="van-line" d="M282 78 h4 M280 86 h6"/>
-          </g>
-          <!-- interior (reveals on scroll near transform, static here) -->
-          <g class="van-wheels">
-            <circle cx="92" cy="118" r="23"/><circle cx="92" cy="118" r="10" class="hub"/>
-            <circle cx="228" cy="118" r="23"/><circle cx="228" cy="118" r="10" class="hub"/>
-          </g>
-        </svg>
-        <span class="bp-tag">SPEC — 001</span>
+        <img class="blueprint__photo" src="assets/hero-van.jpg" alt="Mercedes Sprinter — переобладнання під задачу" width="1200" height="800" decoding="async">
+        <span class="bp-tag">SPRINTER — 001</span>
       </div>
     </div>
   </div>
@@ -572,7 +549,7 @@
       <p>Коротко опишіть задачу — ми запропонуємо рішення. Або залиште номер і оберіть швидкий дзвінок.</p>
       <ul class="contact__facts">
         <li><svg class="ic"><use href="#i-phone"/></svg><a href="tel:+380676585576">+380 67 658 55 76</a></li>
-        <li><svg class="ic"><use href="#i-mail"/></svg><a href="mailto:hello@example.com">hello@example.com</a></li>
+        <li><svg class="ic"><use href="#i-mail"/></svg><a href="mailto:reshenie9@gmail.com">reshenie9@gmail.com</a></li>
         <li><svg class="ic"><use href="#i-pin"/></svg><span>Регіон роботи — вкажіть місто</span></li>
         <li><svg class="ic"><use href="#i-clock"/></svg><span>Пн–Сб, робочі години</span></li>
       </ul>
@@ -644,7 +621,7 @@
     <div class="footer__contacts">
       <h4>Контакти</h4>
       <a href="tel:+380676585576"><svg class="ic"><use href="#i-phone"/></svg>+380 67 658 55 76</a>
-      <a href="mailto:hello@example.com"><svg class="ic"><use href="#i-mail"/></svg>hello@example.com</a>
+      <a href="mailto:reshenie9@gmail.com"><svg class="ic"><use href="#i-mail"/></svg>reshenie9@gmail.com</a>
       <div class="footer__social" aria-label="Соцмережі">
         <a href="#" aria-label="Instagram"><svg class="ic"><use href="#i-ig"/></svg></a>
         <a href="#" aria-label="YouTube"><svg class="ic"><use href="#i-yt"/></svg></a>
