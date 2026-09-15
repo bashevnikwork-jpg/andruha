@@ -181,9 +181,9 @@ main>section{scroll-margin-top:calc(var(--header-h) + 8px)}
 .hero__title{font-size:clamp(2.6rem,6.6vw,5.4rem);text-transform:uppercase;letter-spacing:-.02em}
 .hero__title-a{display:block;color:var(--steel-2);font-weight:500}
 .hero__title em{font-style:normal;color:var(--text);display:block}
-.hero__lead{margin-top:22px;font-size:clamp(1.02rem,1.6vw,1.2rem);color:var(--muted);max-width:46ch}
-.hero .slogan{display:block;margin-top:18px;font-size:1.05rem}
-.hero__cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.hero__lead{margin-top:18px;font-size:clamp(1.02rem,1.6vw,1.2rem);color:var(--muted);max-width:46ch}
+.hero .slogan{display:block;margin-top:14px;font-size:.98rem}
+.hero__cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:26px}
 
 /* blueprint / van */
 .hero__visual{position:relative;justify-self:end;width:100%;max-width:560px}
@@ -322,7 +322,10 @@ main>section{scroll-margin-top:calc(var(--header-h) + 8px)}
 .carousel{position:relative}
 .carousel__track{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;
   scroll-behavior:smooth;-webkit-overflow-scrolling:touch;padding:2px 2px 12px;
-  scrollbar-width:thin;scrollbar-color:var(--line-2) transparent}
+  scrollbar-width:thin;scrollbar-color:var(--line-2) transparent;cursor:grab}
+.carousel__track.is-dragging{cursor:grabbing;scroll-behavior:auto;scroll-snap-type:none}
+.carousel__track.is-dragging img{pointer-events:none}
+.carousel__track img{-webkit-user-drag:none;user-select:none}
 .carousel__track::-webkit-scrollbar{height:6px}
 .carousel__track::-webkit-scrollbar-track{background:transparent}
 .carousel__track::-webkit-scrollbar-thumb{background:var(--line-2);border-radius:3px}

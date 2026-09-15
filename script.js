@@ -259,6 +259,32 @@
     if (next) next.addEventListener('click', function () { track.scrollBy({ left: step(), behavior: 'smooth' }); });
     track.addEventListener('scroll', function () { window.requestAnimationFrame(update); }, { passive: true });
     window.addEventListener('resize', update);
+
+    /* drag to scroll with mouse (hold LMB and swipe) */
+    var isDown = false, startX = 0, startScroll = 0, moved = false;
+    track.addEventListener('pointerdown', function (e) {
+      if (e.pointerType === 'touch') return;   // native touch scroll handles touch
+      if (e.button !== 0) return;              // left button only
+      isDown = true; moved = false;
+      startX = e.clientX; startScroll = track.scrollLeft;
+      track.classList.add('is-dragging');
+      track.setPointerCapture(e.pointerId);
+    });
+    track.addEventListener('pointermove', function (e) {
+      if (!isDown) return;
+      var dx = e.clientX - startX;
+      if (Math.abs(dx) > 4) moved = true;
+      track.scrollLeft = startScroll - dx;
+      e.preventDefault();
+    });
+    function endDrag() { if (isDown) { isDown = false; track.classList.remove('is-dragging'); } }
+    track.addEventListener('pointerup', endDrag);
+    track.addEventListener('pointercancel', endDrag);
+    // if it was a drag, cancel the click so lightbox/video doesn't open
+    track.addEventListener('click', function (e) {
+      if (moved) { e.preventDefault(); e.stopPropagation(); moved = false; }
+    }, true);
+
     update();
   });
 
