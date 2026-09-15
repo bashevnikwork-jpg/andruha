@@ -164,6 +164,11 @@ main>section{scroll-margin-top:calc(var(--header-h) + 8px)}
   mask-image:radial-gradient(120% 90% at 78% 40%,#000 0%,transparent 72%);opacity:.7}
 .hero::after{content:"";position:absolute;z-index:0;width:60vw;height:60vw;right:-18vw;top:-12vw;
   background:radial-gradient(circle,rgba(158,255,0,.10),transparent 62%);pointer-events:none}
+.hero__photo{position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:
+    linear-gradient(90deg,rgba(26,29,36,.97) 0%,rgba(26,29,36,.88) 46%,rgba(26,29,36,.55) 100%),
+    linear-gradient(0deg,var(--g-900) 2%,rgba(26,29,36,0) 42%),
+    url("assets/bg-road.jpg") center right/cover no-repeat}
 
 .hero__vlabel{position:absolute;left:calc(var(--pad) - 4px);top:50%;transform:rotate(180deg) translateY(50%);
   writing-mode:vertical-rl;z-index:2}
@@ -189,6 +194,13 @@ main>section{scroll-margin-top:calc(var(--header-h) + 8px)}
 .crop.bl{bottom:-1px;left:-1px;border-right:0;border-top:0}
 .crop.br{bottom:-1px;right:-1px;border-left:0;border-top:0}
 .bp-tag{position:absolute;right:16px;bottom:12px;font-family:var(--f-d);font-size:.68rem;letter-spacing:.28em;color:var(--steel-dim)}
+
+/* real photo inside the industrial frame */
+.blueprint--photo{padding:10px;background:linear-gradient(180deg,rgba(40,45,56,.4),rgba(26,29,36,.4))}
+.blueprint__photo{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;
+  border-radius:calc(var(--r) - 2px);border:1px solid var(--line-2)}
+.blueprint--photo .bp-tag{right:22px;bottom:20px;color:var(--text);
+  padding:4px 8px;background:rgba(11,13,16,.6);border-radius:3px;backdrop-filter:blur(3px)}
 
 .van-draw{width:100%;height:auto;display:block}
 .van-outline{fill:rgba(61,67,82,.5);stroke:var(--steel);stroke-width:2;stroke-linejoin:round}
@@ -265,10 +277,12 @@ main>section{scroll-margin-top:calc(var(--header-h) + 8px)}
 /* =======================================================================
    TRANSFORMATION
    ======================================================================= */
-.transform{position:relative;background:var(--g-950);overflow:hidden}
+.transform{position:relative;overflow:hidden;background:
+  linear-gradient(rgba(21,24,30,.92),rgba(21,24,30,.95)),
+  url("assets/bg-exterior.jpg") center/cover no-repeat}
 .transform__grid-bg{position:absolute;inset:0;
   background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
-  background-size:48px 48px;opacity:.5;
+  background-size:48px 48px;opacity:.28;
   -webkit-mask-image:radial-gradient(120% 80% at 50% 20%,#000,transparent 75%);
   mask-image:radial-gradient(120% 80% at 50% 20%,#000,transparent 75%)}
 .transform .wrap{position:relative}
@@ -391,7 +405,9 @@ main>section{scroll-margin-top:calc(var(--header-h) + 8px)}
 /* =======================================================================
    QUALITY
    ======================================================================= */
-.quality{background:var(--g-850);border-block:1px solid var(--line)}
+.quality{border-block:1px solid var(--line);background:
+  linear-gradient(rgba(32,36,45,.90),rgba(32,36,45,.94)),
+  url("assets/bg-interior.jpg") center/cover no-repeat}
 .quality__inner{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(28px,5vw,64px);align-items:start}
 .quality__head h2{font-size:clamp(1.8rem,4vw,2.8rem);text-transform:uppercase}
 .quality__head p{margin-top:16px;color:var(--muted);max-width:38ch}
@@ -404,6 +420,9 @@ main>section{scroll-margin-top:calc(var(--header-h) + 8px)}
 /* =======================================================================
    CUSTOM
    ======================================================================= */
+.custom{position:relative;background:
+  linear-gradient(rgba(26,29,36,.90),rgba(26,29,36,.94)),
+  url("assets/hero-van.jpg") center/cover no-repeat}
 .custom__inner{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(28px,5vw,64px);align-items:center}
 .custom__title{font-size:clamp(1.9rem,4.2vw,3rem);text-transform:none;letter-spacing:-.01em;line-height:1.1;max-width:16ch}
 .custom__lead{margin:20px 0 30px;color:var(--muted);max-width:50ch}
