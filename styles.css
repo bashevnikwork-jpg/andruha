@@ -172,8 +172,7 @@ main>section{scroll-margin-top:calc(var(--header-h) + 8px)}
     linear-gradient(0deg,var(--g-900) 2%,rgba(26,29,36,0) 42%),
     url("assets/bg-road.jpg") center right/cover no-repeat}
 
-.hero__vlabel{position:absolute;left:calc(var(--pad) - 4px);top:50%;transform:rotate(180deg) translateY(50%);
-  writing-mode:vertical-rl;z-index:2}
+.hero__vlabel{display:none}
 
 .hero__inner{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(24px,5vw,64px);
   align-items:center;width:100%}
