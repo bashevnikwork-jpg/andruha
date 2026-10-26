@@ -99,6 +99,7 @@
     t.from('.hero .eyebrow', { y: 18, opacity: 0 })
       .from('.hero__title', { y: 26, opacity: 0 }, '-=.5')
       .from('.hero__lead', { y: 20, opacity: 0 }, '-=.5')
+      .from('.hero__doc', { y: 16, opacity: 0 }, '-=.45')
       .from('.hero .slogan', { y: 16, opacity: 0 }, '-=.55')
       .from('.hero__cta .btn', { y: 16, opacity: 0, stagger: .1 }, '-=.5')
       .from('.hero__visual', { y: 30, opacity: 0, duration: 1 }, '-=.7');
@@ -265,6 +266,7 @@
     track.addEventListener('pointerdown', function (e) {
       if (e.pointerType === 'touch') return;   // native touch scroll handles touch
       if (e.button !== 0) return;              // left button only
+      if (e.target.closest('button, a, input, select, textarea')) return; // let photo/video controls receive a normal click
       isDown = true; moved = false;
       startX = e.clientX; startScroll = track.scrollLeft;
       track.classList.add('is-dragging');
