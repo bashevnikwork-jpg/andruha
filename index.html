@@ -280,7 +280,7 @@
         <!-- PASS -->
         <div class="sol__panel" role="tabpanel" id="panel-pass" aria-labelledby="tab-pass" hidden>
           <div class="sol__media">
-            <div class="ph" data-ph="Пасажирський — фото роботи"><svg class="ic"><use href="#i-image"/></svg><span>Фото незабаром</span></div>
+            <button class="work__open sol__open" type="button" data-full="02-pasazhyrskyi/pass-02-interior.jpg" aria-label="Пасажирський — приклад, збільшити"><img class="sol__img" src="02-pasazhyrskyi/pass-02-interior.jpg" alt="Оздоблення пасажирського салону" loading="lazy" decoding="async"></button>
           </div>
           <div class="sol__info">
             <h3>Пасажирський</h3>
@@ -391,6 +391,22 @@
   </div>
 </section>
 
+<!-- ============ CUSTOM / INDIVIDUAL PROJECTS ============ -->
+<section class="custom" id="custom" aria-labelledby="c-title">
+  <div class="wrap custom__inner">
+    <div class="custom__main">
+      <p class="eyebrow"><i class="tick"></i>Індивідуальні проєкти</p>
+      <h2 id="c-title" class="custom__title">Приходьте із задачею — рішення розробимо ми.</h2>
+      <p class="custom__lead">«Потрібен автомобіль для…» — цього достатньо, щоб почати. Далі проєкт, матеріали й переобладнання беремо на себе. Беремося і за нестандартні задачі, зокрема для потреб ЗСУ.</p>
+      <a class="btn btn--primary" href="#contact">Описати задачу</a>
+    </div>
+    <ul class="custom__add">
+      <li><svg class="ic"><use href="#i-doc"/></svg><div><h3>Допомога з документами</h3><p>Супровід в оформленні переобладнання.</p></div></li>
+      <li><svg class="ic"><use href="#i-ruler"/></svg><div><h3>Електронний проєкт</h3><p>Рішення видно ще до старту робіт.</p></div></li>
+    </ul>
+  </div>
+</section>
+
 <!-- ============ WORKS / GALLERY ============ -->
 <section class="works" id="works" aria-labelledby="w-title">
   <div class="wrap">
@@ -421,9 +437,13 @@
       <div class="works__cat" data-cat="pass">
         <h3 class="works__cat-title"><svg class="ic"><use href="#i-seat"/></svg>Пасажирський</h3>
         <div class="carousel">
+          <button class="carousel__btn carousel__btn--prev" type="button" aria-label="Назад"><svg class="ic"><use href="#i-arrow"/></svg></button>
           <div class="carousel__track">
-            <figure class="work work--soon"><div class="ph ph--work" data-ph="Пасажирський"><svg class="ic"><use href="#i-image"/></svg><span>Фото незабаром</span></div></figure>
+            <figure class="work"><button class="work__open" type="button" data-full="02-pasazhyrskyi/pass-01-seats.jpg" aria-label="Пасажирський — фото 1, відкрити"><img src="02-pasazhyrskyi/pass-01-seats.jpg" alt="Пасажирський салон із сидіннями" loading="lazy" decoding="async"></button></figure>
+            <figure class="work"><button class="work__open" type="button" data-full="02-pasazhyrskyi/pass-02-interior.jpg" aria-label="Пасажирський — фото 2, відкрити"><img src="02-pasazhyrskyi/pass-02-interior.jpg" alt="Оздоблення пасажирського салону" loading="lazy" decoding="async"></button></figure>
+            <figure class="work"><button class="work__open" type="button" data-full="02-pasazhyrskyi/pass-03-floor.jpg" aria-label="Пасажирський — фото 3, відкрити"><img src="02-pasazhyrskyi/pass-03-floor.jpg" alt="Підлога та салон пасажирського автобуса" loading="lazy" decoding="async"></button></figure>
           </div>
+          <button class="carousel__btn carousel__btn--next" type="button" aria-label="Далі"><svg class="ic"><use href="#i-arrow"/></svg></button>
         </div>
       </div>
       <div class="works__cat" data-cat="combo">
@@ -510,22 +530,6 @@
       <li><svg class="ic"><use href="#i-bulb"/></svg><div><h3>Освітлення</h3><p>Продумане світло під сценарій використання.</p></div></li>
       <li><svg class="ic"><use href="#i-layers"/></svg><div><h3>Обшивка</h3><p>Фанера, тканина, екошкіра — рівно та надовго.</p></div></li>
       <li><svg class="ic"><use href="#i-wrench"/></svg><div><h3>Якість монтажу</h3><p>Контроль на кожному етапі складання.</p></div></li>
-    </ul>
-  </div>
-</section>
-
-<!-- ============ CUSTOM / INDIVIDUAL PROJECTS ============ -->
-<section class="custom" id="custom" aria-labelledby="c-title">
-  <div class="wrap custom__inner">
-    <div class="custom__main">
-      <p class="eyebrow"><i class="tick"></i>Індивідуальні проєкти</p>
-      <h2 id="c-title" class="custom__title">Приходьте із задачею — рішення розробимо ми.</h2>
-      <p class="custom__lead">«Потрібен автомобіль для…» — цього достатньо, щоб почати. Далі проєкт, матеріали й переобладнання беремо на себе. Беремося і за нестандартні задачі, зокрема для потреб ЗСУ.</p>
-      <a class="btn btn--primary" href="#contact">Описати задачу</a>
-    </div>
-    <ul class="custom__add">
-      <li><svg class="ic"><use href="#i-ruler"/></svg><div><h3>Електронний проєкт</h3><p>Рішення видно ще до старту робіт.</p></div></li>
-      <li><svg class="ic"><use href="#i-doc"/></svg><div><h3>Допомога з документами</h3><p>Супровід в оформленні переобладнання.</p></div></li>
     </ul>
   </div>
 </section>
