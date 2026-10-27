@@ -192,10 +192,6 @@
 
       <div class="hero__cta">
         <a class="btn btn--primary" href="#contact">Обговорити проєкт</a>
-        <button class="btn btn--ghost" type="button" data-open-call>
-          <svg class="ic"><use href="#i-phone"/></svg>
-          Дзвінок за 30 секунд
-        </button>
       </div>
     </div>
 
@@ -558,7 +554,7 @@
   <div class="wrap contact__inner">
     <div class="contact__copy">
       <h2 id="ct-title">Розкажіть, яким має бути ваш автомобіль</h2>
-      <p>Коротко опишіть задачу — ми запропонуємо рішення. Або залиште номер і оберіть швидкий дзвінок.</p>
+      <p>Коротко опишіть задачу — ми запропонуємо рішення. Залиште контакти, щоб обговорити проєкт.</p>
       <ul class="contact__facts">
         <li><svg class="ic"><use href="#i-phone"/></svg><a href="tel:+380676585576">+380 67 658 55 76</a></li>
         <li><svg class="ic"><use href="#i-mail"/></svg><a href="mailto:reshenie9@gmail.com">reshenie9@gmail.com</a></li>
@@ -646,39 +642,6 @@
     <span class="footer__slogan">Комфорт, який видно. Функціонал, який відчуваєш.</span>
   </div>
 </footer>
-
-<!-- ============ FLOATING QUICK CALL ============ -->
-<button class="fab" type="button" data-open-call aria-label="Замовити дзвінок за 30 секунд">
-  <svg class="ic"><use href="#i-phone"/></svg>
-  <span class="fab__text">Дзвінок за 30 сек</span>
-</button>
-
-<!-- ============ CALL MODAL ============ -->
-<div class="modal" id="callModal" aria-hidden="true">
-  <div class="modal__backdrop" data-close-call></div>
-  <div class="modal__box" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-    <button class="modal__close" type="button" data-close-call aria-label="Закрити"><svg class="ic"><use href="#i-close"/></svg></button>
-    <p class="eyebrow"><i class="tick"></i>Швидкий контакт</p>
-    <h3 id="modal-title" class="modal__title">Дзвінок за 30 секунд</h3>
-    <p class="modal__sub">Залиште номер — передзвонимо, щоб обговорити ваш проєкт.</p>
-    <form class="form js-form js-form--quick" novalidate>
-      <div class="field">
-        <label for="m-phone">Телефон <span class="req">*</span></label>
-        <input id="m-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required placeholder="+38 0__ ___ __ __">
-        <span class="field__err" data-err>Вкажіть коректний номер телефону.</span>
-      </div>
-      <button class="btn btn--primary btn--block" type="submit">
-        <svg class="ic"><use href="#i-phone"/></svg>Передзвоніть мені
-      </button>
-
-      <div class="form__success form__success--call" hidden>
-        <div class="countdown" aria-hidden="true"><span data-count>30</span></div>
-        <h3>Приймаємо запит…</h3>
-        <p class="js-call-msg">Передзвонимо протягом 30 секунд.</p>
-      </div>
-    </form>
-  </div>
-</div>
 
 <!-- ============ LIGHTBOX (gallery viewer) ============ -->
 <div class="lightbox" id="lightbox" aria-hidden="true">

@@ -153,62 +153,13 @@
   if (document.readyState === 'complete') boot();
   else window.addEventListener('load', boot);
 
-  /* ---------- MODAL (quick call) ---------- */
-  var modal = $('#callModal');
-  var lastFocus = null;
-  function openModal() {
-    if (!modal) return;
-    lastFocus = document.activeElement;
-    modal.classList.add('open');
-    modal.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
-    var f = $('input', modal); if (f) setTimeout(function () { f.focus(); }, 60);
-  }
-  function closeModal() {
-    if (!modal) return;
-    modal.classList.remove('open');
-    modal.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
-    if (lastFocus) lastFocus.focus();
-  }
-  $$('[data-open-call]').forEach(function (b) { b.addEventListener('click', openModal); });
-  $$('[data-close-call]').forEach(function (b) { b.addEventListener('click', closeModal); });
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && modal && modal.classList.contains('open')) closeModal();
-    if (e.key === 'Tab' && modal && modal.classList.contains('open')) {
-      var f = $$('button, [href], input, select, textarea', modal).filter(function (el) { return !el.disabled && el.offsetParent !== null; });
-      if (!f.length) return;
-      var first = f[0], last = f[f.length - 1];
-      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
-      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
-    }
-  });
-
   /* ---------- FORMS ---------- */
   function validPhone(v) {
     var d = (v || '').replace(/[^\d]/g, '');
     return d.length >= 9 && d.length <= 15;
   }
-  function startCountdown(form) {
-    var box = $('.form__success--call', form);
-    if (!box) return;
-    var el = $('[data-count]', box);
-    var msg = $('.js-call-msg', box);
-    var n = 30;
-    if (reduce || !el) { if (msg) msg.textContent = 'Ми прийняли запит. Скоро зателефонуємо.'; return; }
-    var id = setInterval(function () {
-      n--; el.textContent = n;
-      if (n <= 0) {
-        clearInterval(id);
-        var t = $('h3', box); if (t) t.textContent = 'Готово';
-        if (msg) msg.textContent = 'Дякуємо! Менеджер зв’яжеться з вами.';
-      }
-    }, 1000);
-  }
-
   $$('.js-form').forEach(function (form) {
     var phoneField = $('input[type="tel"]', form);
-    var isQuick = form.classList.contains('js-form--quick');
 
     // легке форматування вводу
     if (phoneField) {
@@ -237,7 +188,6 @@
       var success = $('.form__success', form);
       form.classList.add('is-sent');
       if (success) success.hidden = false;
-      if (isQuick) startCountdown(form);
     });
   });
 

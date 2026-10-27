@@ -540,39 +540,6 @@ main>section{scroll-margin-top:calc(var(--header-h) + 8px)}
 .footer__slogan{font-family:var(--f-d);font-style:italic;letter-spacing:.01em}
 
 /* =======================================================================
-   FAB + MODAL
-   ======================================================================= */
-.fab{position:fixed;right:20px;bottom:20px;z-index:55;display:inline-flex;align-items:center;gap:0;
-  height:58px;padding:0;width:58px;border-radius:30px;background:var(--lime);color:var(--ink);
-  box-shadow:0 14px 34px -10px rgba(158,255,0,.55);overflow:hidden;transition:width .35s var(--ease),padding .35s var(--ease)}
-.fab .ic{width:24px;height:24px;stroke-width:1.9;flex:none;margin:0 17px}
-.fab__text{font-family:var(--f-d);font-weight:500;text-transform:uppercase;font-size:.9rem;letter-spacing:.03em;white-space:nowrap;opacity:0;transition:opacity .25s}
-.fab::after{content:"";position:absolute;inset:0;border-radius:30px;border:2px solid var(--lime);
-  animation:pulse 2.4s var(--ease) infinite}
-@keyframes pulse{0%{transform:scale(1);opacity:.6}70%,100%{transform:scale(1.5);opacity:0}}
-.fab:hover{width:222px;padding-right:22px}
-.fab:hover .fab__text{opacity:1}
-
-.modal{position:fixed;inset:0;z-index:90;display:none}
-.modal.open{display:block}
-.modal__backdrop{position:absolute;inset:0;background:rgba(13,15,20,.72);backdrop-filter:blur(3px);
-  animation:fade .3s var(--ease)}
-@keyframes fade{from{opacity:0}to{opacity:1}}
-.modal__box{position:absolute;left:50%;top:50%;translate:-50% -50%;width:min(440px,92vw);
-  background:var(--g-850);border:1px solid var(--line-2);border-radius:var(--r);padding:clamp(24px,4vw,38px);
-  animation:pop .35s var(--ease)}
-@keyframes pop{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
-.modal__box::before,.modal__box::after{content:"";position:absolute;width:12px;height:12px;border:2px solid var(--lime)}
-.modal__box::before{top:-1px;left:-1px;border-right:0;border-bottom:0}
-.modal__box::after{bottom:-1px;right:-1px;border-left:0;border-top:0}
-.modal__close{position:absolute;right:12px;top:12px;width:38px;height:38px;display:grid;place-items:center;color:var(--steel-2);border-radius:var(--r)}
-.modal__close:hover{color:var(--text);background:var(--g-800)}
-.modal__title{font-size:1.7rem;text-transform:uppercase;margin-bottom:8px}
-.modal__sub{color:var(--muted);margin-bottom:22px;font-size:.95rem}
-.form__success--call .countdown{width:74px;height:74px;border-radius:50%;display:grid;place-items:center;
-  border:2px solid var(--lime);font-family:var(--f-d);font-size:2rem;color:var(--lime)}
-
-/* =======================================================================
    REVEAL (JS-driven; без JS/GSAP усе видно)
    ======================================================================= */
 .js .reveal{opacity:0;transform:translateY(20px)}
@@ -628,8 +595,6 @@ main>section{scroll-margin-top:calc(var(--header-h) + 8px)}
   .flow li:not(:last-child)::after{display:none}
   .footer__inner{grid-template-columns:1fr}
   .footer__bottom{flex-direction:column;gap:8px}
-  .fab:hover{width:58px;padding-right:0}
-  .fab:hover .fab__text{opacity:0}
 }
 
 /* =======================================================================
